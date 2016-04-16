@@ -6,7 +6,8 @@
   "auth": {
     "token": {
       "secret": "xmZNZAQ+2n7OI7BRbmxe1UclCnijpRdER0qMa42yUBoPXtTOU34TgvkpyjRaU8nspGi01PlyOFsJHMsKKuZmZg=="
-    },
-    "local": {}
+      },
+      "local": {},
+      "successRedirect": "/chat.html"
+    }
   }
-}
