@@ -43,7 +43,6 @@ const roomsSchema = new Schema({
     type: Array,
     default: [],
   }
-
 });
 
 const roomsModel = mongoose.model('rooms', roomsSchema);

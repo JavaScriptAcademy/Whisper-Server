@@ -1,12 +1,13 @@
 {
   "host": "localhost",
   "port": 3030,
-  "mongodb": "mongodb://localhost:27017/test",
+  "mongodb": "mongodb://localhost:27017/chat",
   "public": "../public/",
   "auth": {
     "token": {
       "secret": "xmZNZAQ+2n7OI7BRbmxe1UclCnijpRdER0qMa42yUBoPXtTOU34TgvkpyjRaU8nspGi01PlyOFsJHMsKKuZmZg=="
-    },
-    "local": {}
+      },
+      "local": {},
+      "successRedirect": "http://localhost:8100/#/app/roomlist"
+    }
   }
-}
