@@ -1,5 +1,9 @@
 'use strict';
 
+const updateRoomMember = require('./updateRoomMember');
+
+const login = require('./login');
+
 const signup = require('./signup');
 const handler = require('feathers-errors/handler');
 const notFound = require('./not-found-handler');
@@ -12,6 +16,8 @@ module.exports = function() {
   const app = this;
 
   app.post('/signup', signup(app));
+  app.post('/login', login(app));
+  app.post('/rooms/updateUser', updateRoomMember(app));
   app.use(notFound());
   app.use(logger(app));
   app.use(handler());

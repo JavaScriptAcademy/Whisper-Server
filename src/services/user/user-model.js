@@ -19,8 +19,7 @@ const userSchema = new Schema({
     required: 'Password should not be blank',
   },
 	nickname: {
-    type: String,
-    trim: true
+    type: String
   },
 	profileImage: {
     type: String,
@@ -33,6 +32,9 @@ const userSchema = new Schema({
     type: Date,
     'default': Date.now
   },
+  avatar:{
+    type: String
+  }
 });
 
 const userModel = mongoose.model('user', userSchema);

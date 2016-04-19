@@ -6,7 +6,9 @@ module.exports = function(app) {
         // Get the user service and `create` a new user
         app.service('users').create({
             email: body.email,
-            password: body.password
+            password: body.password,
+            nickname: body.nickname,
+            profileImage: body.profileImage
         }).then(user=>{
             return res.send(user);
         })
