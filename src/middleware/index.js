@@ -1,6 +1,7 @@
 'use strict';
 
-const updateRoomMember = require('./updateRoomMember');
+const updateLastVisit = require('./updateLastVisit');
+const getRecentVisit = require('./getRecentVisit');
 
 const login = require('./login');
 
@@ -17,7 +18,8 @@ module.exports = function() {
 
   app.post('/signup', signup(app));
   app.post('/login', login(app));
-  app.post('/rooms/updateUser', updateRoomMember(app));
+  app.post('/users/resetRecentVisit', updateLastVisit(app));
+  app.get('/users/getRecentVisit/:userId', getRecentVisit(app));
   app.use(notFound());
   app.use(logger(app));
   app.use(handler());
