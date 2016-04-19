@@ -8,6 +8,6 @@
       "secret": "xmZNZAQ+2n7OI7BRbmxe1UclCnijpRdER0qMa42yUBoPXtTOU34TgvkpyjRaU8nspGi01PlyOFsJHMsKKuZmZg=="
       },
       "local": {},
-      "successRedirect": "/chattingRoom.html"
+      "successRedirect": "http://localhost:8100/#/app/roomlist"
     }
   }
