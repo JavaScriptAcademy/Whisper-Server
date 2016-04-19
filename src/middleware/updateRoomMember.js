@@ -7,8 +7,7 @@ module.exports = function(app) {
     const member = {
       nickname: body.nickname
     }
-    app.service('users').find(body.userId).then(data=>{
-      console.log(data);
+    app.service('users').find(body.roomId).then(data=>{
     })
     .catch(next);
   };

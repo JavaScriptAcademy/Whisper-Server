@@ -1,5 +1,7 @@
 'use strict';
 
+const updateMessages = require('./updateMessages');
+
 const updateRoomMember = require('./updateRoomMember');
 
 const login = require('./login');
@@ -18,6 +20,7 @@ module.exports = function() {
   app.post('/signup', signup(app));
   app.post('/login', login(app));
   app.post('/rooms/updateUser', updateRoomMember(app));
+  app.post('/rooms/updateMessages', updateMessages(app));
   app.use(notFound());
   app.use(logger(app));
   app.use(handler());
