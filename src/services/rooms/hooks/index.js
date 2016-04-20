@@ -1,5 +1,7 @@
 'use strict';
 
+const processMessage = require('./processMessage');
+
 const globalHooks = require('../../../hooks');
 const hooks = require('feathers-hooks');
 const auth = require('feathers-authentication').hooks;
@@ -13,7 +15,7 @@ exports.before = {
   find: [],
   get: [],
   create: [],
-  update: [],
+  update: [processMessage()],
   patch: [],
   remove: []
 };

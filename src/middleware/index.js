@@ -2,6 +2,8 @@
 
 const updateLastVisit = require('./updateLastVisit');
 const getRecentVisit = require('./getRecentVisit');
+const updateMessages = require('./updateMessages');
+
 
 const login = require('./login');
 
@@ -20,6 +22,7 @@ module.exports = function() {
   app.post('/login', login(app));
   app.post('/users/resetRecentVisit', updateLastVisit(app));
   app.get('/users/getRecentVisit/:userId', getRecentVisit(app));
+  app.post('/rooms/updateMessages', updateMessages(app));
   app.use(notFound());
   app.use(logger(app));
   app.use(handler());
