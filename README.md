@@ -1,12 +1,12 @@
 # Whisper-Server
-**A Totally Anonymous Chatting System**
+**A Totally Anonymous Chatting Service**
 
 ## Table of contents
 
 * [About](#about)
 * [Quick start](#quick-start)
 * [Modules](#modules)
-* [Creators](#creators)
+* [Contributors](#Contributors)
 
 ## About
 This project uses Feathers. An open source web framework for building modern real-time applications.
@@ -22,7 +22,7 @@ Several quick start options are available:
  * Room Services
  * User Services
 
-## Creators
+## Contributors
 
 **Yancey Yan**
 
