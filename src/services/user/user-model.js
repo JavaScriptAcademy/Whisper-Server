@@ -26,7 +26,10 @@ const userSchema = new Schema({
     trim: true
   },
 	visitedRooms: [
-  { _id: String, lastVisitTime: Date }
+  { roomId: String,
+    name: String,
+    roomImage: String,
+    lastVisitTime: Date}
   ],
 	createdAt: {
     type: Date,

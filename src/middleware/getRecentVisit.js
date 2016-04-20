@@ -9,13 +9,13 @@ module.exports = function(app) {
     .then(user=>{
       let rooms = user.visitedRooms;
       console.log('rooms',rooms);
-      let roomList = [];
-      rooms.forEach((room) => {
-        app.service('rooms').get(room._id).then(roomObj => roomList.push(roomObj));
-      })
+      return rooms;
 
-      console.log('roomList',roomList);
-      return roomList;
+      // let roomList = [];
+      // rooms.forEach((room) => {
+      //   app.service('rooms').get(room._id).then(roomObj => roomList.push(roomObj));
+      // })
+
     });
   };
 };

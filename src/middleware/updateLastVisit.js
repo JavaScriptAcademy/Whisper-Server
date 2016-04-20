@@ -4,15 +4,17 @@ module.exports = function(app) {
   return function(req, res, next) {
     // Perform actions
     const userId = req.body.userId;
-    const roomId = req.body.roomId;
+    const room = req.body.room;
     app.service('users').get(userId).then(user=>{
       let visitedRooms = user.visitedRooms;
       if(visitedRooms){
         let rooms = visitedRooms.filter((item)=>{
-          return item._id !== roomId;
+          return item.roomId !== room._id;
         });
         rooms.push({
-          _id: roomId,
+          roomId: room._id,
+          name: room.name,
+          roomImage: room.roomImage,
           lastVisitTime : new Date()
         });
         app.service('users').update(userId, {$set:{visitedRooms: rooms}},
