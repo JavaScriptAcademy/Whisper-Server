@@ -1,57 +1,37 @@
-# test
+# Whisper-Server
+**A Totally Anonymous Chatting System**
 
-> test
+## Table of contents
+
+* [About](#about)
+* [Quick start](#quick-start)
+* [Modules](#modules)
+* [Creators](#creators)
 
 ## About
+This project uses Feathers. An open source web framework for building modern real-time applications.
 
-This project uses [Feathers](http://feathersjs.com). An open source web  framework for building modern real-time applications.
+## Quick start
 
-## Getting Started
+Several quick start options are available:
 
-Getting up and running is as easy as 1, 2, 3.
+* [Download the latest release](https://github.com/JavaScriptAcademy/Whisper-Server.git).
+* Clone the repo: `git@github.com:JavaScriptAcademy/Whisper-Server.git`.
 
-1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
-    
-    ```
-    cd path/to/test; npm install
-    ```
+## Modules
+ * Room Services
+ * User Services
 
-3. Start your app
-    
-    ```
-    npm start
-    ```
+## Creators
 
-## Testing
+**Yancey Yan**
 
-Simply run `npm test` and all your tests in the `test/` directory will be run.
+* <https://github.com/yancey1204>
 
-## Scaffolding
+**Adam Yuan**
 
-Feathers has a powerful command line interface. Here are a few things it can do:
+* <https://github.com/freshmenyuan>
 
-```
-$ npm install -g feathers-cli             # Install Feathers CLI
+**Cyrus Cai**
 
-$ feathers generate service               # Generate a new Service
-$ feathers generate hook                  # Generate a new Hook
-$ feathers generate model                 # Generate a new Model
-$ feathers help                           # Show all commands
-```
-
-## Help
-
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
-
-## Changelog
-
-__0.1.0__
-
-- Initial release
-
-## License
-
-Copyright (c) 2015
-
-Licensed under the [MIT license](LICENSE).
+* <https://github.com/cyruscai>
