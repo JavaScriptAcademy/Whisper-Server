@@ -10,8 +10,8 @@ module.exports = function() {
   const options = {
     Model: rooms,
     paginate: {
-      default: 5,
-      max: 25
+      default: 30,
+      max: 100
     }
   };
 

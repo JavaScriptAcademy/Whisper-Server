@@ -5,6 +5,7 @@ module.exports = function(app) {
     // Perform actions
     const userId = req.body.userId;
     const room = req.body.room;
+    console.log('room',room);
     app.service('users').get(userId).then(user=>{
       let visitedRooms = user.visitedRooms;
       if(visitedRooms){
@@ -19,7 +20,7 @@ module.exports = function(app) {
         });
         app.service('users').update(userId, {$set:{visitedRooms: rooms}},
           (response)=>{
-            console.log('response',response);
+            console.log('get response',response);
           });
       }
     })
