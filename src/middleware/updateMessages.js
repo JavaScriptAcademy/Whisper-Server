@@ -11,7 +11,7 @@ module.exports = function(app) {
       userProfileImage:body.userProfileImage
     }
     app.service('rooms').update(body.roomId, {$push:{messages: newMessage}}).then(data=>{
-      console.log(data);
+      console.log('data',data);
       return res.send(data);
     })
   .catch(next);

@@ -8,16 +8,30 @@ module.exports = function(app) {
     console.log('room',room);
     app.service('users').get(userId).then(user=>{
       let visitedRooms = user.visitedRooms;
+      let rooms;
       if(visitedRooms){
-        let rooms = visitedRooms.filter((item)=>{
-          return item.roomId !== room._id;
-        });
+        let tempId = room.roomId;
+        if(tempId){
+          console.log('recent visit');
+          rooms = visitedRooms.filter((item)=>{
+            return item.roomId !== room.roomId;
+          });
+        }else{
+          console.log('new room');
+          tempId = room._id;
+          rooms = visitedRooms.filter((item)=>{
+            return item.roomId !== room._id;
+          });
+        }
+        console.log('rooms before push',rooms);
         rooms.push({
-          roomId: room._id,
+          roomId: tempId,
           name: room.name,
           roomImage: room.roomImage,
           lastVisitTime : new Date()
         });
+        console.log('rooms after push',rooms);
+
         app.service('users').update(userId, {$set:{visitedRooms: rooms}},
           (response)=>{
             console.log('get response',response);
