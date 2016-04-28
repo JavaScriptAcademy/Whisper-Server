@@ -1,5 +1,7 @@
 'use strict';
 
+const getOwnedRooms = require('./getOwnedRooms');
+
 const updateLastVisit = require('./updateLastVisit');
 const getRecentVisit = require('./getRecentVisit');
 const updateMessages = require('./updateMessages');
@@ -23,6 +25,7 @@ module.exports = function() {
   app.post('/users/resetRecentVisit', updateLastVisit(app));
   app.get('/users/getRecentVisit/:userId', getRecentVisit(app));
   app.post('/rooms/updateMessages', updateMessages(app));
+  app.get('/rooms/getOwnRooms/:userId', getOwnedRooms(app));
   app.use(notFound());
   app.use(logger(app));
   app.use(handler());
