@@ -3,10 +3,10 @@
 
 ## Table of contents
 
-* [About](#about)
-* [Quick start](#quick-start)
-* [Modules](#modules)
-* [Contributors](#Contributors)
+* [About]( #about )
+* [Quick start]( #quick-start )
+* [Modules]( #modules )
+* [Contributors]( #Contributors )
 
 ## About
 This project uses Feathers. An open source web framework for building modern real-time applications.
@@ -17,6 +17,7 @@ Several quick start options are available:
 
 * [Download the latest release](https://github.com/JavaScriptAcademy/Whisper-Server.git).
 * Clone the repo: `git@github.com:JavaScriptAcademy/Whisper-Server.git`.
+* install dependances: `npm install`
 
 ## Modules
  * Room Services
@@ -28,10 +29,11 @@ Several quick start options are available:
 
 * <https://github.com/yancey1204>
 
+**Cyrus Cai**
+
+* <https://github.com/cyruscai>
+
 **Adam Yuan**
 
 * <https://github.com/freshmenyuan>
 
-**Cyrus Cai**
-
-* <https://github.com/cyruscai>
